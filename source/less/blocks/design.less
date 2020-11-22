@@ -1,0 +1,40 @@
+.design {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 22px;
+    padding-bottom: 23px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #e5e5e5;
+    }
+}
+
+.design__text {
+    display: block;
+    margin-right: 27px;
+    font-size: 19px;
+    line-height: 19px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.design__htmlacademy-link {
+    width: 27px;
+    height: 34px;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+        fill: #46c1ae;
+    }
+
+    &:active {
+        fill: rgba(#46c1ae, 0.3);
+    }
+}

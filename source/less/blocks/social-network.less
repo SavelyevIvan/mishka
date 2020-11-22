@@ -1,7 +1,30 @@
 .social-network {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
 }
+
 .social-network__btn {
-    padding: 20px;
+    margin: 24px 20px;
+    &--insta {
+        width: 22px;
+        height: 21px;
+    }
+    &--fb {
+        width: 15px;
+        height: 28px;
+    }
+    &--twitter {
+        width: 23px;
+        height: 20px;
+    }
+
+    &:hover,
+    &:focus {
+        fill: #46c1ae;
+    }
+
+    &:active {
+        fill: rgba(#46c1ae, 0.3);
+    }
 }

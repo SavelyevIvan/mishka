@@ -1,21 +1,127 @@
+.advantages {
+    width: 260px;
+    margin: 0 auto;
+    padding-top: 17px;
+    margin-bottom: 38px;
+    @media (min-width: @tablet-width) {
+        width: 668px;
+    }
+    @media (min-width: @desktop-width) {
+        width: 700px;
+    }
+}
+
 .advantages__list {
-    padding: 0px;
+    padding: 0;
     list-style: none;
-}
-
-.advantages__item {
-    padding-top: 60px;
-    padding-bottom: 20px;
-    font-weight: bold;
-    color: #000000;
-}
-
-@media (min-width: @tablet-width) {
-    .advantages__list {
+    font-size: 17px;
+    line-height: 20px;
+    @media (min-width: @tablet-width) {
         display: flex;
         flex-wrap: wrap;
     }
-    .advantages__item {
+}
+
+.advantages__item {
+    position: relative;
+    padding-top: 66px;
+    padding-bottom: 17px;
+    font-weight: bold;
+    color: #000000;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &--flower {
+        &::before {
+            top: 12px;
+            left: 9px;
+            width: 32px;
+            height: 37px;
+            background: url("../img/svg_icon/icon-feature-flower.svg");
+        }
+    }
+
+    &--money {
+        &::before {
+            top: 14px;
+            left: 0;
+            width: 47px;
+            height: 27px;
+            background: url("../img/svg_icon/icon-feature-money.svg");
+        }
+    }
+
+    &--heart {
+        &::before {
+            top: 19px;
+            left: 8px;
+            width: 34px;
+            height: 27px;
+            background: url("../img/svg_icon/icon-feature-heart.svg");
+        }
+    }
+
+    &--ball {
+        &::before {
+            top: 16px;
+            left: 5px;
+            width: 35px;
+            height: 34px;
+            background: url("../img/svg_icon/icon-feature-ball.svg");
+        }
+    }
+
+    &--rocket {
+        &::before {
+            top: 17px;
+            left: -5px;
+            width: 55px;
+            height: 23px;
+            background: url("../img/svg_icon/icon-feature-rocket.svg");
+        }
+    }
+
+    &--gift {
+        &::before {
+            top: 15px;
+            left: 4px;
+            width: 33px;
+            height: 32px;
+            background: url("../img/svg_icon/icon-feature-gift.svg");
+        }
+    }
+    @media (min-width: @tablet-width) {
+        box-sizing: border-box;
         width: 334px;
+        padding-top: 67px;
+        padding-bottom: 44px;
+        padding-right: 45px;
+        font-size: 20px;
+        line-height: 22px;
+
+        &--money {
+            order: 3;
+        }
+
+        &--heart {
+            order: 5;
+        }
+
+        &--ball {
+            order: 2;
+        }
+
+        &--rocket {
+            order: 4;
+        }
+
+        &--gift {
+            order: 6;
+        }
     }
 }

@@ -1,11 +1,65 @@
-@media (min-width: @tablet-width) {
-    .user-menu {
+.user-menu {
+    @media (min-width: @tablet-width) {
         order: -1;
+    }
+    @media (min-width: @desktop-width) {
+        order: 0;
     }
 }
 
-@media (min-width: @desktop-width) {
-    .user-menu {
-        order: 0;
+.user-menu__item {
+    @media (min-width: @tablet-width) {
+        box-shadow: -1px 0 0 0 #ececec;
     }
+}
+
+.user-menu__item--search a {
+    @media (min-width: @tablet-width) {
+        box-sizing: border-box;
+        width: 83px;
+        height: 100%;
+    }
+}
+
+.user-menu__item--search span {
+    @media (min-width: @tablet-width) {
+        display: none;
+    }
+}
+
+.user-menu__link {
+    position: relative;
+
+    &:focus .user-menu__text,
+    &:hover .user-menu__text {
+        opacity: 0.3;
+    }
+
+    &:active .user-menu__text {
+        opacity: 0.3;
+    }
+
+    &:focus .user-menu__img,
+    &:hover .user-menu__img {
+        fill: #63d1bb;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+    @media (min-width: @tablet-width) {
+        padding-top: 29px;
+        padding-bottom: 32px;
+        padding-left: 80px;
+    }
+    @media (min-width: @desktop-width) {
+        padding-left: 84px;
+    }
+}
+
+.user-menu__img {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    fill: rgba(#231f20, 0.2);
 }

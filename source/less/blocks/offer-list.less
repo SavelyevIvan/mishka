@@ -1,0 +1,38 @@
+.offer-list {
+    display: none;
+    @media (min-width: @desktop-width) {
+        display: flex;
+        position: absolute;
+        top: 73px;
+        left: 0;
+        padding: 0;
+        font-size: 15px;
+        font-weight: bold;
+        z-index: 10;
+    }
+}
+
+.offer-list__item {
+    list-style: none;
+    &:first-child {
+        margin-right: 31px;
+    }
+    &:last-child {
+        margin-left: 31px;
+    }
+}
+
+.offer-list__item a {
+    color: #000000;
+    text-decoration: none
+}
+
+.offer-list__link {
+    &:hover .offer-list__text,
+    &:focus .offer-list__text {
+        opacity: 0.6;
+    }
+    &:active .offer-list__text {
+        opacity: 0.3;
+    }
+}

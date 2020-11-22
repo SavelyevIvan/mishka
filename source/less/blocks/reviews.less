@@ -1,26 +1,120 @@
-.reviews__item {
-    margin-left: 0px;
-    margin-right: 0px;
+.reviews {
+    margin-bottom: 86px;
+    @media (min-width: @tablet-width) {
+        position: relative;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        background: url("../img/review@1x.jpg") no-repeat left;
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+            background-image: url("../img/review@2x.jpg");
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -83px;
+            left: 0;
+            width: 100%;
+            height: 17px;
+            background: url("../img/zigzag-line-tablet.svg") repeat center;
+        }
+    }
 }
 
-.reviews__toggle-container {
+.reviews__wrapper {
+    @media (min-width: @tablet-width) {
+        position: relative;
+    }
+}
+
+.reviews__title {
+    margin-bottom: 24px;
+    @media (min-width: @tablet-width) {
+        margin-bottom: 51px;
+    }
+}
+
+.reviews__text {
+    margin-bottom: 26px;
+    line-height: 30px;
+    @media (min-width: @tablet-width) {
+        margin-bottom: 55px;
+    }
+}
+
+.reviews__item {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.reviews__author-name {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000;
+    @media (min-width: @tablet-width) {
+        margin-bottom: 0;
+    }
+}
+
+.reviews__user-nickname {
+    font-size: 17px;
+    display: block;
+}
+
+.reviews__toggle-wrapper {
     display: flex;
-    margin-top: 18px;
-    margin-bottom: 18px;
+    margin-top: 33px;
+    margin-bottom: 38px;
+    @media (min-width: @tablet-width) {
+        position: absolute;
+        bottom: 15px;
+        right: -21px;
+        margin: 0;
+    }
 }
 
 .reviews__toggle {
     box-sizing: border-box;
     width: 130px;
     height: 52px;
-    background-color: #444444;
     border: 1px solid #ececec;
     cursor: pointer;
+    &:hover,
+    &:focus {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+
     &--next {
         border-left: none;
+        background: url("../img/svg_icon/icon-right-arrow.svg") no-repeat center;
+    }
+
+    &--prev {
+        background: url("../img/svg_icon/icon-left-arrow.svg") no-repeat center;
+    }
+    @media (min-width: @tablet-width) {
+        width: 50px;
+        height: 26px;
+        margin-right: 37px;
+        border: none;
     }
 }
 
-.revievs__write {
+.revievs__btn {
     text-decoration: none;
+    @media (min-width: @tablet-width) {
+        position: absolute;
+        top: 5px;
+        right: 0;
+        width: auto;
+        padding-left: 34px;
+        padding-right: 34px;
+    }
 }
