@@ -4,6 +4,7 @@
     @media (min-width: @tablet-width) {
         position: relative;
         margin-bottom: 57px;
+
         &::before {
             content: "";
             position: absolute;
@@ -14,17 +15,44 @@
             background: url("../img/svg_icon/icon-flag.svg");
         }
     }
+    @media (min-width: @desktop-width) {
+        position: relative;
+        display: flex;
+        width: 1050px;
+        margin: 0 auto;
+        margin-bottom: 105px;
+        padding-top: 0;
+
+        &::before {
+            top: 63px;
+            right: 0;
+            left: 64px;
+        }
+    }
 }
 
 .contacts__wrapper {
     width: 260px;
     margin: 0 auto 37px;
     @media (min-width: @tablet-width) {
-        display: flex;
-        flex-wrap: wrap;
         width: 668px;
         margin-bottom: 13px;
     }
+    @media (min-width: @desktop-width) {
+        box-sizing: border-box;
+        flex-direction: column;
+        width: 50%;
+        padding-left: 175px;
+        padding-right: 50px;
+    }
+}
+
+.contacts__info {
+    @media (min-width: @tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media (min-width: @desktop-width) {}
 }
 
 .contacts__item {
@@ -32,6 +60,9 @@
     margin-bottom: 30px;
     @media (min-width: @tablet-width) {
         width: 50%;
+    }
+    @media (min-width: @desktop-width) {
+        width: auto;
     }
 }
 
@@ -42,6 +73,11 @@
     line-height: 50px;
     @media (min-width: @tablet-width) {
         margin-bottom: 49px;
+    }
+    @media (min-width: @desktop-width) {
+        margin-top: 71px;
+        font-size: 53px;
+        line-height: 57px;
     }
 }
 
@@ -71,6 +107,11 @@
     @media (min-width: @tablet-width) {
         width: 230px;
     }
+    @media (min-width: @desktop-width) {
+        position: absolute;
+        bottom: 0;
+        left: 175px;
+    }
 }
 
 .contacts__map {
@@ -80,5 +121,9 @@
     background-size: cover;
     @media (min-width: @tablet-width) {
         margin-bottom: 55px;
+    }
+    @media (min-width: @desktop-width) {
+        width: 50%;
+        margin-bottom: 0;
     }
 }
